@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Our Wedding</title>
+
+  <link rel="stylesheet" href="style.css">
+
+ 
+</head>
+
+<body>
+  <header>
+    <h1>Sarah & Ahsan's Wedding</h1>
+    <p>Join us on our special day</p>
+  </header>
+
+  <section class="photo-section">
+    <img class="couple-photo" src="https://t3.ftcdn.net/jpg/06/66/16/08/240_F_666160835_IvddJV7zbgyUtdVTXYfNTjb0T8ctjbM2.jpg" alt="Couple Photo">
+  </section>
+
+  <section class="event-details">
+    <h2>Wedding Details</h2>
+    <p><strong>Date:</strong> 20th December 2025</p>
+    <p><strong>Time:</strong> 5:00 PM onwards</p>
+    <p><strong>Venue:</strong> Dream Garden Banquet Hall, Lahore</p>
+  </section>
+
+  <section class="rsvp">
+    <h2>RSVP</h2>
+    <form id="rsvp-form">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <button type="submit" class="rsvp-button">Submit RSVP</button>
+    </form>
+    <p id="response-message"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sarah & Ahsan. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('rsvp-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      document.getElementById('response-message').textContent = `Thank you, ${name}! We look forward to seeing you.`;
+      this.reset();
+    });
+  </script>
+</body>
+</html>
